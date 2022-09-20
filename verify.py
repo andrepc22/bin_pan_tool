@@ -1,7 +1,6 @@
 import traceback
 
 def validar_Pan(cadena):
-    # print(cadena)
     thirdOperation = 0
     if cadena == "":
         return False
@@ -54,10 +53,11 @@ def validar_Pan(cadena):
 
         fifthOperation = str(fourthOperation)
         fifthOperation = fifthOperation[0:1]
-        if (not fifthOperation) == cadena[len(cadena)-1:len(cadena)] :
-            print("this false")
+        if not (fifthOperation == cadena[len(cadena)-1:len(cadena)]) :
+            # print("this false")
             return False
-        
+
+    # print("this true")
     return True
 
 
@@ -82,5 +82,4 @@ def execution(pan):
             traceback.print_exc()
 
 x = input("Pan: ")
-# print(type(x))
 execution(x)
