@@ -1,2 +1,2 @@
-x = input()
-print(len(x))
+x, y = 4
+print(x, y)
